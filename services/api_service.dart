@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:http/http.dart' as http;
 import 'package:flutter_application_1/models/webtoon_detail_model.dart';
 import 'package:flutter_application_1/models/webtoon_episode_model.dart';
@@ -9,6 +8,7 @@ class ApiService {
   static const String baseUrl =
       "https://webtoon-crawler.nomadcoders.workers.dev";
   static const String today = "today";
+
   static Future<List<WebtoonModel>> getTodaysToons() async {
     List<WebtoonModel> webtoonInstances = [];
     final url = Uri.parse('$baseUrl/$today');
